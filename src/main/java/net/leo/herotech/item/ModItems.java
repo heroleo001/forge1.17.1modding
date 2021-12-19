@@ -1,7 +1,6 @@
 package net.leo.herotech.item;
 
 import net.leo.herotech.HeroTech;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fmllegacy.RegistryObject;
