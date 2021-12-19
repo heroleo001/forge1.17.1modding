@@ -1,6 +1,7 @@
 package net.leo.herotech.item;
 
 import net.leo.herotech.HeroTech;
+import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fmllegacy.RegistryObject;
@@ -19,6 +20,10 @@ public class ModItems {
 
     public static final RegistryObject<Item> TITANIUM_RAW = ITEMS.register("titanium_raw",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.HEROTECH_TAB)));
+
+    public static final RegistryObject<Item> TOMATO = ITEMS.register("tomato",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.HEROTECH_TAB)
+                    .food(new FoodProperties.Builder().nutrition(3).saturationMod(0.3f).build())));
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
