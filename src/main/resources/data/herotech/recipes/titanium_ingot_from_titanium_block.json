@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "herotech:titanium_block"
+    }
+  ],
+  "result": {
+    "item": "herotech:titanium_ingot",
+    "count": 9
+  }
+}
