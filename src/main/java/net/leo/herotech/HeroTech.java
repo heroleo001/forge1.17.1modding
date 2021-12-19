@@ -1,5 +1,6 @@
 package net.leo.herotech;
 
+import net.leo.herotech.item.ModItems;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -22,10 +23,12 @@ public class HeroTech
     public HeroTech() {
 
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        ModItems.register(eventBus);
+
         eventBus.addListener(this::setup);
 
 
-        // test
         MinecraftForge.EVENT_BUS.register(this);
     }
 
