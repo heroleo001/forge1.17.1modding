@@ -1,6 +1,7 @@
 package net.leo.herotech.block;
 
 import net.leo.herotech.HeroTech;
+import net.leo.herotech.item.ModCreativeModeTab;
 import net.leo.herotech.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -21,7 +22,7 @@ public class ModBlocks {
 
 
     public static final RegistryObject<Block> TITANIUM_BLOCK = registerBlock("titanium_block",
-            () -> new Block(BlockBehaviour.Properties.of(Material.METAL).strength(12f)));
+            () -> new Block(BlockBehaviour.Properties.of(Material.METAL).strength(12f)), CreativeModeTab.TAB_BUILDING_BLOCKS);
 
     public static final RegistryObject<Block> TITANIUM_ORE = registerBlock("titanium_ore",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(6f)));
@@ -34,7 +35,17 @@ public class ModBlocks {
     }
     private static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block){
         ModItems.ITEMS.register(name, () -> new BlockItem(block.get(),
-                new Item.Properties().tab(CreativeModeTab.TAB_MATERIALS)));
+                new Item.Properties().tab(ModCreativeModeTab.HEROTECH_TAB)));
+    }
+
+    private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab){
+        RegistryObject<T> toReturn = BLOCKS.register(name, block);
+        registerBlockItem(name, toReturn, tab);
+        return toReturn;
+    }
+    private static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block, CreativeModeTab tab){
+        ModItems.ITEMS.register(name, () -> new BlockItem(block.get(),
+                new Item.Properties().tab(tab)));
     }
 
     public static void register(IEventBus eventBus){
