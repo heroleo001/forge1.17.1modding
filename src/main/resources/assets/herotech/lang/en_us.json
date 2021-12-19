@@ -1,5 +1,8 @@
 {
   "item.herotech.titanium_ingot": "Titanium Ingot",
   "item.herotech.titanium_nugget": "Titanium Nugget",
-  "item.herotech.titanium_raw": "Raw Titanium"
+  "item.herotech.titanium_raw": "Raw Titanium",
+
+  "block.herotech.titanium_ore": "Titanium Ore",
+  "block.herotech.titanium_block": "Titanium Block"
 }
