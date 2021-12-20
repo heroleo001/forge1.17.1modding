@@ -17,6 +17,9 @@ public class ModItems {
     public static final RegistryObject<Item> TITANIUM_INGOT = ITEMS.register("titanium_ingot",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.HEROTECH_TAB)));
 
+    public static final RegistryObject<Item> CIRCUIT = ITEMS.register("circuit",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.HEROTECH_TAB)));
+
     public static final RegistryObject<Item> TITANIUM_NUGGET = ITEMS.register("titanium_nugget",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.HEROTECH_TAB)));
 
