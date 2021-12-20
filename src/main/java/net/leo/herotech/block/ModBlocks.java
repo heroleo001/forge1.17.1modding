@@ -1,6 +1,7 @@
 package net.leo.herotech.block;
 
 import net.leo.herotech.HeroTech;
+import net.leo.herotech.block.custom.SpeedyBlock;
 import net.leo.herotech.item.ModCreativeModeTab;
 import net.leo.herotech.item.ModItems;
 import net.minecraft.world.item.BlockItem;
@@ -26,6 +27,9 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> TITANIUM_ORE = registerBlock("titanium_ore",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(4f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> SPEEDY_BLOCK = registerBlock("speedy_block",
+            () -> new SpeedyBlock(BlockBehaviour.Properties.of(Material.METAL).strength(5f).requiresCorrectToolForDrops()));
 
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block){
