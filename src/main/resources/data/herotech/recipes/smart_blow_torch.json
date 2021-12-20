@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "tFg",
+    "ii ",
+    "s  "
+  ],
+  "key": {
+    "t": {
+      "item": "forge:ingots/titanium"
+    },
+    "F": {
+      "item": "minecraft:flint_and_steel"
+    },
+    "i": {
+      "item": "minecraft:iron_ingot"
+    },
+    "g": {
+      "item": "minecraft:glass"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "herotech:smart_blow_torch"
+  }
+}
