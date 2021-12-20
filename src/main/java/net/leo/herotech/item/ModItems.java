@@ -1,6 +1,7 @@
 package net.leo.herotech.item;
 
 import net.leo.herotech.HeroTech;
+import net.leo.herotech.item.custom.CoalCokeItem;
 import net.leo.herotech.item.custom.SmartBlowTorchItem;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
@@ -28,6 +29,9 @@ public class ModItems {
 
     public static final RegistryObject<Item> SMART_BLOW_TORCH = ITEMS.register("smart_blow_torch",
             () -> new SmartBlowTorchItem(new Item.Properties().tab(ModCreativeModeTab.HEROTECH_TAB)));
+
+    public static final RegistryObject<Item> COAL_COKE = ITEMS.register("coal_coke",
+            () -> new CoalCokeItem(new Item.Properties().tab(ModCreativeModeTab.HEROTECH_TAB)));
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
